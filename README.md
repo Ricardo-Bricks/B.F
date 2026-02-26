@@ -1,6 +1,6 @@
 Started Offically working on this project 23/02/26
 
-Hosting a free open source forum software over at https://bricks.foundation
+Hosting a free open source forum software over at https://bricks.foundation/forums
 
 Take part in the alpha stages of bricks.foundation either has someone who helps out or someone who wants to see to be apart of bricks.foundation memember base.
 
