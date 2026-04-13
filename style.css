@@ -324,7 +324,6 @@ ul {
 }
 
 .upload-panel .image-placeholder {
-  display: inline-block;
   width: 125px;
   height: 125px;
   border: 2px dashed #1a5276;
