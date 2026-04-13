@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bricks Foundation – A free, open-source LEGO® multi-vendor marketplace and community forum." />
   <title>Bricks Foundation – Forums Homepage</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- ========== TOP NAVIGATION BAR ========== -->
-  <nav class="top-nav">
+  <nav class="top-nav" aria-label="Primary navigation">
     <a href="#">Home</a><span class="sep">|</span>
     <a href="#">Blog</a><span class="sep">|</span>
     <a href="#">Become a Seller!</a><span class="sep">|</span>
@@ -34,24 +35,24 @@
     </div>
 
     <!-- Login -->
-    <div class="header-login">
+    <form class="header-login" action="#" method="post" autocomplete="off">
       <label for="username">Username:</label>
-      <input type="text" id="username" name="username" />
+      <input type="text" id="username" name="username" placeholder="Enter username" />
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password" />
-      <button class="btn-login" type="button">Login</button>
+      <input type="password" id="password" name="password" placeholder="Enter password" />
+      <button class="btn-login" type="submit">Login</button>
       <div class="auth-links">
         <a href="#">Register Here!</a>
         <a href="#">Forgot Password?</a>
       </div>
-    </div>
+    </form>
   </header>
 
   <!-- ========== PAGE WRAPPER ========== -->
   <div class="page-wrapper">
 
     <!-- ===== LEFT SIDEBAR ===== -->
-    <aside class="left-sidebar">
+    <aside class="left-sidebar" aria-label="Site navigation">
       <ul>
         <li><a href="#" class="active">Home</a></li>
         <li><a href="#">Forums</a></li>
@@ -184,7 +185,7 @@
     </main>
 
     <!-- ===== RIGHT SIDEBAR ===== -->
-    <aside class="right-sidebar">
+    <aside class="right-sidebar" aria-label="Promotions and sellers">
 
       <!-- Advertisement Box -->
       <div class="ad-box">
@@ -198,10 +199,14 @@
         <p class="ad-note">Enter Store Name and Short motto here.<br /><em>(This is a paid promotion or won from contests)</em></p>
       </div>
 
+      <hr class="sidebar-divider" />
+
       <!-- Top Selling -->
       <div class="sidebar-section">
         <h4>Top Selling LEGO&reg;</h4>
       </div>
+
+      <hr class="sidebar-divider" />
 
       <!-- Store-related links -->
       <div class="sidebar-section">
@@ -211,6 +216,8 @@
           <li><a href="#">Sellers Feedbacks</a></li>
         </ul>
       </div>
+
+      <hr class="sidebar-divider" />
 
       <!-- Sellers by region -->
       <div class="sidebar-section">
