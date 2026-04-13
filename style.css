@@ -1,0 +1,516 @@
+/* ============================================================
+   BRICKS.FOUNDATION – Forums Homepage Stylesheet
+   Color Palette:
+     - Page / panels background : #0b0e1a  (very dark navy)
+     - Panel / card backgrounds : #0f1729  (dark blue-grey)
+     - Borders & dividers       : #1a5276  (teal / dark cyan)
+     - Primary accent (links)   : #00e676  (bright green)
+     - Secondary text           : #cfd8dc  (light grey)
+     - Headings / emphasis      : #ffffff
+     - Top nav bar              : #141b2d
+     - Input fields             : #1c2538
+   ============================================================ */
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0b0e1a;
+  color: #cfd8dc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #00e676;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #69f0ae;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------- Top Navigation Bar ---------- */
+.top-nav {
+  background: #141b2d;
+  border-bottom: 2px solid #1a5276;
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+}
+
+.top-nav a {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.3rem 0.6rem;
+}
+
+.top-nav .sep {
+  color: #1a5276;
+  user-select: none;
+  font-weight: 700;
+  padding: 0.3rem 0;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background: #0f1729;
+  border-bottom: 2px solid #1a5276;
+  padding: 1rem 1.5rem;
+  display: grid;
+  grid-template-columns: 180px 1fr 260px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-brand {
+  text-align: center;
+}
+
+.site-brand h2 {
+  color: #cfd8dc;
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.site-title-block {
+  text-align: center;
+}
+
+.site-title-block h1 {
+  color: #ffffff;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.25rem;
+}
+
+.site-title-block .tagline {
+  color: #00e676;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Login box in header */
+.header-login {
+  text-align: right;
+  font-size: 0.85rem;
+}
+
+.header-login label {
+  display: block;
+  color: #cfd8dc;
+  margin-bottom: 0.15rem;
+}
+
+.header-login input[type="text"],
+.header-login input[type="password"] {
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  margin-bottom: 0.35rem;
+  background: #1c2538;
+  border: 1px solid #1a5276;
+  color: #ffffff;
+  border-radius: 3px;
+}
+
+.header-login .btn-login {
+  display: inline-block;
+  background: #1a5276;
+  color: #ffffff;
+  border: none;
+  padding: 0.35rem 1.2rem;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 3px;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.header-login .btn-login:hover {
+  background: #217dbb;
+}
+
+.header-login .auth-links a {
+  display: block;
+  color: #00e676;
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
+}
+
+/* ---------- Page Layout (sidebar + main + right sidebar) ---------- */
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 190px 1fr 240px;
+  flex: 1;
+  gap: 0;
+}
+
+/* ---------- Left Sidebar ---------- */
+.left-sidebar {
+  background: #0f1729;
+  border-right: 2px solid #1a5276;
+  padding: 0.75rem 0;
+}
+
+.left-sidebar ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-sidebar li a {
+  display: block;
+  padding: 0.45rem 1rem;
+  color: #cfd8dc;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: background 0.15s, color 0.15s;
+}
+
+.left-sidebar li a:hover,
+.left-sidebar li a.active {
+  background: #1a5276;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.left-sidebar li.spacer {
+  height: 0.65rem;
+}
+
+.left-sidebar li.newsletter a {
+  color: #00e676;
+  font-weight: 700;
+}
+
+/* ---------- Main Content ---------- */
+.main-content {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* -- Stores Promo Banner -- */
+.stores-promo {
+  background: #0f1729;
+  border: 2px solid #1a5276;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.stores-promo h3 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.stores-promo ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.stores-promo ul li a {
+  color: #00e676;
+  font-size: 0.85rem;
+}
+
+/* -- Three-column content area -- */
+.content-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+/* Shared panel style */
+.panel {
+  background: #0f1729;
+  border: 2px solid #1a5276;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  background: #141b2d;
+  border-bottom: 2px solid #1a5276;
+  padding: 0.55rem 0.75rem;
+  text-align: center;
+}
+
+.panel-header h3 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.panel-body {
+  padding: 0.65rem 0.75rem;
+  flex: 1;
+}
+
+/* -- Forums Links Panel -- */
+.forums-links .panel-body ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: center;
+}
+
+.forums-links .panel-body ul li a {
+  color: #cfd8dc;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.forums-links .panel-body ul li a:hover {
+  color: #00e676;
+}
+
+/* -- Upload Panel -- */
+.upload-panel .panel-body {
+  text-align: center;
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.upload-panel .panel-body .label {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.upload-panel .panel-body .value {
+  color: #00e676;
+}
+
+.upload-panel .panel-body .value.blue {
+  color: #42a5f5;
+}
+
+.upload-panel .image-placeholder {
+  display: inline-block;
+  width: 125px;
+  height: 125px;
+  border: 2px dashed #1a5276;
+  margin: 0.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #546e7a;
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.upload-panel .btn-upload {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 1.4rem;
+  background: #1a5276;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.upload-panel .btn-upload:hover {
+  background: #217dbb;
+}
+
+/* -- Blog Feed Panel -- */
+.blog-feed .panel-body {
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.blog-entry {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed #1a5276;
+}
+
+.blog-entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.blog-entry .meta-label {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.blog-entry .meta-value {
+  color: #00e676;
+}
+
+.blog-entry .preview {
+  color: #cfd8dc;
+  font-style: italic;
+}
+
+.blog-entry .read-more {
+  color: #00e676;
+  font-weight: 600;
+}
+
+/* ---------- Right Sidebar ---------- */
+.right-sidebar {
+  background: #0f1729;
+  border-left: 2px solid #1a5276;
+  padding: 0.75rem 0.6rem;
+  font-size: 0.82rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+/* Ad box */
+.ad-box {
+  border: 2px solid #1a5276;
+  border-radius: 4px;
+  padding: 0.6rem;
+  text-align: center;
+  background: #141b2d;
+}
+
+.ad-box h4 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+
+.ad-box .ad-label {
+  color: #ffffff;
+  font-weight: 700;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.ad-box .ad-value {
+  color: #cfd8dc;
+  font-size: 0.78rem;
+  display: block;
+}
+
+.ad-box .ad-note {
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  color: #cfd8dc;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.ad-box .ad-note em {
+  color: #00e676;
+  font-size: 0.7rem;
+}
+
+/* Right sidebar link list */
+.right-sidebar .sidebar-section h4 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  text-align: center;
+  margin-bottom: 0.35rem;
+}
+
+.right-sidebar .sidebar-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.right-sidebar .sidebar-section ul li a {
+  color: #cfd8dc;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.right-sidebar .sidebar-section ul li a:hover {
+  color: #00e676;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: #141b2d;
+  border-top: 2px solid #1a5276;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  color: #cfd8dc;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* ---------- Responsive helpers ---------- */
+@media (max-width: 1100px) {
+  .site-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .header-login {
+    text-align: center;
+  }
+
+  .page-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .left-sidebar,
+  .right-sidebar {
+    border: none;
+    border-bottom: 2px solid #1a5276;
+  }
+
+  .content-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .site-title-block h1 {
+    font-size: 1.8rem;
+  }
+}
